@@ -81,6 +81,16 @@ What up my glip-glops! This is an app for people who are obsessed with the Rick 
 "https://rickandmortyapi.com/api/episode/49",
 "https://rickandmortyapi.com/api/episode/50",
 "https://rickandmortyapi.com/api/episode/51"
-]
 
 
+
+# Visual of your component hierarchy
+
+
+# Wire Frames
+
+# User Stories
+
+# MVP Goals
+
+# Stretch Goals 
