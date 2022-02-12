@@ -1,26 +1,25 @@
-
+import {Link} from 'react-router-dom'
 
 function CharacterList(props){
-  
-
+    
     console.log('Morty show me the characters list', props)
 
     return(
     <div>
 
         <h2>Character List page </h2>
-           {props.allCharacter.map((allRickandMortyChar, index) =>{
+        <section className="container">
+        
+        {props.character.map((allRickandMortyChar, index) =>{
                return(
-                <section className="container" key={index}>
-                    <div className="card" >
-                        <div className="image-card" >
-                            <img src={allRickandMortyChar.image} alt="character pic"/>
-                            
-                            </div>
-                            <div className="title-card" >
+                    <Link to={`/characters/${allRickandMortyChar.results}`}key={index}>
+                    <div className="card" key={index}>
+                    <div className="image-card" >
+                        <img src={allRickandMortyChar.image} alt="characterPic"/>
+                        </div>
+                        <div className="title-card" >
                             {allRickandMortyChar.name}
-                            </div>
-                            
+                        </div>
                             {/* <li>    
                                 Name:{allRickandMortyChar.name}
                                 Status: {allRickandMortyChar.status}
@@ -28,13 +27,11 @@ function CharacterList(props){
                                 Gender: {allRickandMortyChar.gender}
                                 Origin: {allRickandMortyChar.origin.name}
                             </li> */}
-                    </div>
-                       
-               </section>        
-
+                    </div>   
+                    </Link>
                     )
             })}
-           
+            </section>
 
         </div>
 

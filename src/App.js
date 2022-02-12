@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react'
 import {useState, useEffect} from 'react'
-import {Routes, Route}  from 'react-router-dom'
+import {Routes, Link, Route}  from 'react-router-dom'
 
 
 // components
@@ -34,22 +34,16 @@ function Home(){
 
 ) 
 }
-
-
 return (
   <div className="App">
+    
     <Routes>
       <Route path="/" element={<Home />} />
-        {/* <div>
-       
-          <CharacterList allCharacter={character}/>
-        
-        </div> */}
+      <Route path="/characterlist" element={ <CharacterList setCharacter={setCharacter} character={character}/> } />
+     
      </Routes>
-  
-  
+     <Link to="/characterlist"><button>Click me!</button></Link>
   </div>
-    
   );
 }
 
