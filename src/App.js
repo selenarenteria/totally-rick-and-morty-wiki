@@ -1,51 +1,55 @@
 import './App.css';
-import {useEffect, useState} from 'react'
 import React from 'react'
+import {useState, useEffect} from 'react'
+import {Routes, Route}  from 'react-router-dom'
 
 
 // components
-import CharacterList from './components/CharacterList';
-
-
+import CharacterList from './components/CharacterList'
 
 
 function App() {
-  const [rickandmorty, setRickAndMorty] = useState([])
+  const [character, setCharacter] = useState([])
+    
+    const handleFetch = async() => {
+      const URL = "https://rickandmortyapi.com/api/character"
+          fetch(URL)
+          .then((res) => res.json())
+          .then((json) => {
+          
+          setCharacter(json.results)
+       } )
+          .catch(error=> {
+          console.log(error)
+       })
 
-   const URL = "https://rickandmortyapi.com/api/character"
+   }
+useEffect(() => {
+  handleFetch()
+}, [])
 
-   useEffect(() => {
+function Home(){
+ return(
+   <h2>This is the welcome page</h2>
 
-      fetch(URL)
-      .then((res) => res.json())
-      .then((json) => {
-      console.log('fetching Rick and Morty Characters with useEffect', json.results)
-      setRickAndMorty(json.results)
-    } )
-      .catch(error=> {
-        console.log(error)
-      })
+) 
+}
 
-    }, [])
-
-  //  if (!rickandmorty){
-  //    <h2> Ricks voice "Today has been a total Morty"</h2>
-  //  }
 
 return (
-    <div className="App">
-      <h1>This is the Welcome page!</h1>
-      <div>
+  <div className="App">
+    <Routes>
+      <Route path="/" element={<Home />} />
+        {/* <div>
        
-        <CharacterList 
+          <CharacterList allCharacter={character}/>
         
-          character={rickandmorty}
-        
-        />
-        
-      </div>
-       
-    </div>
+        </div> */}
+     </Routes>
+  
+  
+  </div>
+    
   );
 }
 
