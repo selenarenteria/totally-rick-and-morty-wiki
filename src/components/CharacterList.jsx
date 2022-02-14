@@ -1,8 +1,11 @@
+import React from 'react'
 import {Link} from 'react-router-dom'
+import './CharacterList.css'
 
 function CharacterList(props){
     
-    console.log('Morty show me the characters list', props)
+    
+    // console.log('Morty show me the characters list', props)
 
     return(
     <div>
@@ -11,32 +14,25 @@ function CharacterList(props){
         <section className="container">
         
         {props.character.map((allRickandMortyChar, index) =>{
+            console.log(props.character)
                return(
-                    <Link to={`/characters/${allRickandMortyChar.results}`}key={index}>
+                    <Link to={`/characters/${allRickandMortyChar.id}`}key={index}>
                     <div className="card" key={index}>
                     <div className="image-card" >
                         <img src={allRickandMortyChar.image} alt="characterPic"/>
                         </div>
                         <div className="title-card" >
                             {allRickandMortyChar.name}
+                            
                         </div>
-                            {/* <li>    
-                                Name:{allRickandMortyChar.name}
-                                Status: {allRickandMortyChar.status}
-                                Species: {allRickandMortyChar.species}
-                                Gender: {allRickandMortyChar.gender}
-                                Origin: {allRickandMortyChar.origin.name}
-                            </li> */}
+                            
                     </div>   
                     </Link>
                     )
             })}
             </section>
 
-        </div>
-
-        
-    
+        </div>  
         
     )
 }

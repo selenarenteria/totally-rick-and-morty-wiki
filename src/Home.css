@@ -1,0 +1,17 @@
+
+h1 {
+    color: aliceblue;
+    display: flex;
+  }
+  
+  h2{
+    color: aliceblue;
+  }
+  
+main{
+    background-image: url('./images/r&mbackground.jpeg');
+    background-size: cover;
+    height: 800px;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+  }

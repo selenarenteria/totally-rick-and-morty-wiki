@@ -1,18 +1,21 @@
 import './App.css';
 import React from 'react'
 import {useState, useEffect} from 'react'
-import {Routes, Link, Route}  from 'react-router-dom'
+import {Routes, Route}  from 'react-router-dom'
 
 
 // components
+
 import CharacterList from './components/CharacterList'
+import Home from './Home'
+import CharacterDetail from './components/CharacterDetails';
 
 
 function App() {
   const [character, setCharacter] = useState([])
     
     const handleFetch = async() => {
-      const URL = "https://rickandmortyapi.com/api/character"
+      const URL = "https://rickandmortyapi.com/api/character/"
           fetch(URL)
           .then((res) => res.json())
           .then((json) => {
@@ -28,21 +31,17 @@ useEffect(() => {
   handleFetch()
 }, [])
 
-function Home(){
- return(
-   <h2>This is the welcome page</h2>
 
-) 
-}
 return (
   <div className="App">
     
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/characterlist" element={ <CharacterList setCharacter={setCharacter} character={character}/> } />
+      <Route path="/character/" element={ <CharacterList setCharacter={setCharacter} character={character}/> } />
+      <Route path="/characters/:id" element= {<CharacterDetail />} /> 
      
      </Routes>
-     <Link to="/characterlist"><button>Click me!</button></Link>
+    
   </div>
   );
 }
