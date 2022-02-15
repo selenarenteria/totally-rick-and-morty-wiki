@@ -3,13 +3,9 @@ import {Link} from 'react-router-dom'
 import './CharacterList.css'
 
 function CharacterList(props){
-    
-    
-    
-
     return(
     <div>
-        <Link to="/"><button>Take Me Home Morty</button></Link>
+        <Link to="/"><button className='take-me'>Take Me Home Morty</button></Link>
        
         <section className="container">
         
@@ -18,7 +14,7 @@ function CharacterList(props){
                return(
                     <Link to={`/characters/${allRickandMortyChar.id}`}key={index}>
                     <div className="card" key={index}>
-                    <div className="image-card" >
+                        <div className="image-card" >
                         <img src={allRickandMortyChar.image} alt="characterPic"/>
                         </div>
                         <div className="title-card" >
