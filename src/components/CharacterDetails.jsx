@@ -1,12 +1,12 @@
 import {useParams} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import './CharacterDetail.css'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 function CharacterDetail() {
     const {id} = useParams()
-    console.log("Morty! this is the characters detail #", id)
+    
 
     const [rickAndMortyDeets, setRickAndMortyDeets] = useState([])
 
@@ -15,7 +15,7 @@ function CharacterDetail() {
             fetch(URL)
             .then((res) => res.json())
             .then((json) => {
-            console.log(json)
+            
             setRickAndMortyDeets(json)
          } )
             .catch(error=> {
@@ -29,7 +29,7 @@ function CharacterDetail() {
 
   return (
       <div>
-          <h2>Rick! Tell me this is the individual character details page </h2>
+        
               
           
             <ul>
@@ -38,10 +38,10 @@ function CharacterDetail() {
                 <li>Status:{rickAndMortyDeets.status}</li>
                 <li>Species:{rickAndMortyDeets.species}</li>
                 <li>Gender:{rickAndMortyDeets.gender}</li>
-                {/* <li>Location:{rickAndMortyDeets.location.name}</li> */}
+                
 
             </ul> 
-        <button>Location</button>
+            <Link to="/locations/"><button>Burb</button></Link>
       </div>
       
                                            

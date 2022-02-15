@@ -9,6 +9,8 @@ import {Routes, Route}  from 'react-router-dom'
 import CharacterList from './components/CharacterList'
 import Home from './Home'
 import CharacterDetail from './components/CharacterDetails';
+import LocationList from './components/LocationList';
+import LocationDetail from './components/LocationDetails';
 
 
 function App() {
@@ -29,7 +31,25 @@ function App() {
    }
 useEffect(() => {
   handleFetch()
-}, [])
+},[])
+
+const [rickAndMortyLocation, setRickAndMortyLocation] = useState([])
+
+    const manageFetch = async() => {
+    const URL = "https://rickandmortyapi.com/api/location/"
+        fetch(URL)
+        .then((res) => res.json())
+        .then((json) => {
+        setRickAndMortyLocation(json.results)
+    } )
+        .catch(error=> {
+        console.log(error)
+     })
+          
+    }
+    useEffect(() => {
+        manageFetch()
+ }, [])
 
 
 return (
@@ -37,8 +57,10 @@ return (
     
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/character/" element={ <CharacterList setCharacter={setCharacter} character={character}/> } />
+      <Route path="/character" element={ <CharacterList setCharacter={setCharacter} character={character}/> } />
       <Route path="/characters/:id" element= {<CharacterDetail />} /> 
+      <Route path="/locations/:id" element= {<LocationDetail />} />
+      <Route path="/locations/" element= {<LocationList setRickAndMortyLocation={setRickAndMortyLocation} rickAndMortyLocation={rickAndMortyLocation} />} />
      
      </Routes>
     
