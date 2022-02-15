@@ -1,17 +1,14 @@
 
-h1 {
-    color: aliceblue;
-    display: flex;
-  }
-  
-  h2{
-    color: aliceblue;
-  }
-  
-main{
+.Home{
     background-image: url('./images/r&mbackground.jpeg');
     background-size: cover;
-    height: 850px;
-    background-repeat: no-repeat;
-    
-  }
+    height: 850px; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    /* margin-top: -60px;  */
+} 
+
+.saying1{
+  text-align: right;
+  margin-top: 50px;
+}

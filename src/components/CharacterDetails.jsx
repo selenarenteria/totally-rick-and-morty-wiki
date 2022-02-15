@@ -28,20 +28,19 @@ function CharacterDetail() {
   }, [])
 
   return (
-      <div>
-        
-              
-          
-            <ul>
+      <div className='details-page'>
+            <ul className='character-image'>
                 <img src={rickAndMortyDeets.image} alt="faceOfCharacter"></img>
-                <li>{rickAndMortyDeets.name}</li>
+            </ul>
+            <ul className='character-details'><li>{rickAndMortyDeets.name}</li>
                 <li>Status:{rickAndMortyDeets.status}</li>
                 <li>Species:{rickAndMortyDeets.species}</li>
-                <li>Gender:{rickAndMortyDeets.gender}</li>
+                <li>Gender:{rickAndMortyDeets.gender}</li> </ul>
                 
-
-            </ul> 
-            <Link to="/locations/"><button>Burb</button></Link>
+             
+            <Link to="/locations/"><button className='burb-button'>Burb</button></Link>
+            
+           
       </div>
       
                                            
