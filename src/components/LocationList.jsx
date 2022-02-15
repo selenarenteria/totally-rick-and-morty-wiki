@@ -1,13 +1,13 @@
 import {Link} from 'react-router-dom'
+import './LocationList.css'
 
 
 function LocationList(props) {
    
     
-    return(<div>
-      <Link to="/character/"><button>Rick and Morty Characters</button></Link>  
-    <section className="container">
-         
+    return(<div className='whole-thing'>
+      <Link to="/character/"><button className="rick-and_morty">Rick and Morty Characters</button></Link>  
+    <section className="container-world">    
     {props.rickAndMortyLocation.map((allLocations, index) =>{
        
         return(
