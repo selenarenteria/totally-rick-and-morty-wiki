@@ -1,8 +1,8 @@
 .rick-and_morty{ 
 align-items: center;
-/* margin-left: 650px; */
+margin-left: 550px;
 color:black;
-border: 4px solid rgba(92, 92, 92, 0.831);
+border: 4px solid rgb(45, 196, 80);
 border-radius: 0px;
 padding: 18px 36px;
 display: inline-block;
@@ -10,13 +10,13 @@ font-family: "Lucida Console", Monaco, monospace;
 font-size: 14px;
 letter-spacing: 1px;
 cursor: pointer;
-box-shadow: inset 0 0 0 0 #919191;
+box-shadow: inset 0 0 0 0 #26dc45;
 -webkit-transition: ease-out 0.4s;
 -moz-transition: ease-out 0.4s;
 transition: ease-out 0.4s;
 }
 .rick-and_morty:hover {
-box-shadow: inset 400px 0 0 0 #6f6f6f;
+box-shadow: inset 400px 0 0 0 #16c44d;
 }
 .whole-thing{
 background-size: stretch;
@@ -25,4 +25,10 @@ background-repeat: no-repeat;
 background-position-x: center;
 padding:100px;
 background-attachment: fixed;
+}
+
+.pickle-rick{
+    list-style: none;
+   text-align: center;
+   color: black;
 }

@@ -14,7 +14,7 @@ function LocationList(props) {
             <Link to={`/locations/${allLocations.id}`} key={index}>
                 <div className="rick-morty_world">
                     <ul>
-                        <li>{allLocations.name}</li>
+                        <li className='pickle-rick'>{allLocations.name}</li>
                     </ul>
                       
                     </div>     
