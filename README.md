@@ -139,3 +139,12 @@ a button to take you to the specific characters last known location and their ep
 also when on the location's details page to be able to see the list of residents
 also a next page button that loads all the characters in the list and locations list
 
+# Getting Started 
+Fork the Repo, and clone it down to your specified terminal on your local machine from Github.
+
+# Contributions
+Thanks to the RickandMorty API 
+Thanks to the guidance from my classmates Addy Rodriguez, Claudia Londono.
+
+
+
