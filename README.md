@@ -115,7 +115,9 @@ What up my glip-glops! This is an app for people who are obsessed with the Rick 
 # User Stories
 As a user, I want to be greeted by a Rick and Morty character on the welcome page and click a button to take me to the characters list.
 
-As a user, I would like to click on an individual character to view additional details about it. Also be able to click a button to take me to their last known location and a link to the episode they start in.
+As a user, I would like to click on an individual character to view additional details about it. Also be able to click a button to take me to the location's list page.
+
+As a user, I would like to view the locations list and be able to click on the specific location and see their details. 
 
 As a user, I want to be able to view the characters' last known location details and also the episode details. ←—- I consider this my stretch goal
 
@@ -128,4 +130,7 @@ making sure my fetch is calling my api
 ## Stretch Goals 
 
 the Animation for the homepage
+a button to take you to the specific characters last known location and their episode they came out on. 
+also when on the location's details page to be able to see the list of residents
+also a next page button that loads all the characters in the list and locations list
 
