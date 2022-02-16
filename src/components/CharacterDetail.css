@@ -11,7 +11,9 @@
     list-style: none;
     text-align:center;
     font-size: 30px;
-    /* add color font and font styling  */
+    font-family: 'Indie Flower', cursive;
+    color: rgb(1, 1, 1);
+    font-size: 40px;
 
 }
 

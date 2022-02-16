@@ -36,11 +36,13 @@ function CharacterDetail() {
             <ul className='character-details'>
                <Link to="/locations/"><button className='burb-button'>Burb</button></Link> 
                 <li>{rickAndMortyDeets.name}</li>
-                <li>Status:{rickAndMortyDeets.status}</li>
-                <li>Species:{rickAndMortyDeets.species}</li>
-                <li>Gender:{rickAndMortyDeets.gender}</li> </ul>
+                <li>Status:  {rickAndMortyDeets.status}</li>
+                <li>Species:  {rickAndMortyDeets.species}</li>
+                <li>Gender:  {rickAndMortyDeets.gender}</li> </ul>
                 
-             
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+         </style>  
             
             
            

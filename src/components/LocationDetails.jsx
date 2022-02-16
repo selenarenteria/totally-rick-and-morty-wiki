@@ -1,6 +1,6 @@
 import {useParams, Link} from 'react-router-dom'
 import {useEffect, useState} from 'react'
-
+import './LocationDetails.css'
 
 
 
@@ -26,20 +26,21 @@ function LocationDetail() {
   useEffect(() => {
     handleFetch()
   }, [])
-    return(
-        <div>
-          
+    return(<div className='everything'>
+          <ul className='world-details'>
            <p>Rick and Morty Worlds:</p>
-           <ul>
-               <li>Name:{locationDeets.name}</li>
-               <li>Type:{locationDeets.type}</li>
-               <li>Dimension:{locationDeets.dimension}</li>
+           
+               <li>Name: {locationDeets.name}</li>
+               <li>Type: {locationDeets.type}</li>
+               <li>Dimension: {locationDeets.dimension}</li>
                
            </ul>
 
-           <Link to="/locations/"><button>Rick and Morty World</button></Link>
+           <Link to="/locations/"><button className='world-button'>Rick and Morty World</button></Link>
            
-            
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+         </style>
         </div>
         
        

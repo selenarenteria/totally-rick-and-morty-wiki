@@ -21,7 +21,7 @@ function CharacterList(props){
                             {allRickandMortyChar.name}
                             
                         </div>
-                            
+               
                     </div>   
                     </Link>
                     )

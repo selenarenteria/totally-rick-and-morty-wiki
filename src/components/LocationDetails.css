@@ -1,0 +1,40 @@
+.everything{
+background-image: url(/public/world.jpeg);
+background-size: stretch;
+background-repeat: no-repeat;
+background-position-x: center;
+padding:100px;
+height: 600px;
+background-attachment: fixed;  
+}
+
+
+
+.world-details {
+margin-top: 200px;    
+margin-left: 100px;
+list-style: none;
+font-family: 'Indie Flower', cursive;
+font-size: 40px;
+}
+
+.world-button {  
+margin-left: 100px;
+color:black;
+border: 4px solid rgba(92, 92, 92, 0.831);
+border-radius: 0px;
+padding: 18px 36px;
+display: inline-block;
+font-family: "Lucida Console", Monaco, monospace;
+font-size: 14px;
+letter-spacing: 1px;
+cursor: pointer;
+box-shadow: inset 0 0 0 0 #919191;
+-webkit-transition: ease-out 0.4s;
+-moz-transition: ease-out 0.4s;
+transition: ease-out 0.4s;
+}
+        
+.world-button:hover {
+box-shadow: inset 400px 0 0 0 #6f6f6f;
+}
